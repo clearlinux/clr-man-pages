@@ -1,0 +1,11 @@
+Makefile
+Makefile.in
+aclocal.m4
+autom4te.cache/
+clr-man-pages-*.tar.xz
+config.log
+config.status
+configure
+install-sh
+missing
+stateless.1
