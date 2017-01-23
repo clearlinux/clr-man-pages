@@ -1,5 +1,6 @@
 EXTRA_DIST = \
 	README.md \
+	LICENSE \
 	stateless.1 \
 	stateless.1.md
 

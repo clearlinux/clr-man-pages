@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([clr-man-pages], [4], [dev@lists.clearlinux.org])
+AC_INIT([clr-man-pages], [5], [dev@lists.clearlinux.org])
 AM_INIT_AUTOMAKE([foreign -Wall -W subdir-objects no-dist-gzip dist-xz])
 AM_SILENT_RULES([yes])
 
