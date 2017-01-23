@@ -1,5 +1,6 @@
 EXTRA_DIST = \
 	README.md \
+	stateless.1 \
 	stateless.1.md
 
 dist_man_MANS = \
