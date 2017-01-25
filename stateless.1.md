@@ -149,6 +149,25 @@ to, for instance, change the port number sshd.service will listen on
 to port 10022.
 
 
+ * **nginx**
+
+Nginx ships by default in a non-functional configuration. However,
+an example configuration file is present that can be used to enable
+a simple server. To use this template configuration, create:
+
+    `mkdir /etc/nginx`
+
+And then copy the template over to this folder:
+
+    `cp /usr/share/nginx/conf/server.conf.example /etc/nginx/server.conf`
+
+Edit the file to assure options such as SSL and PHP are enabled in
+the preferred method. In the default configuration, PHP is enabled
+to run listening to `/run/php-fpm.sock`. The template file has PHP
+by default disabled, but the listed example lines can be uncommented
+to make the nginx service process php documents.
+
+
  * **php-fpm**
 
 Php's default configuration file doesn't allow us to provide an 
