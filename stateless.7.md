@@ -213,6 +213,8 @@ location for pool configuration files.
 
 https://clearlinux.org/documentation/
 
+https://clearlinux.org/features/stateless
+
 https://github.com/clearlinux/swupd-client/
 
 ## NOTES
