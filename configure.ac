@@ -6,7 +6,7 @@ AC_INIT([clr-man-pages], [6], [dev@lists.clearlinux.org])
 AM_INIT_AUTOMAKE([foreign -Wall -W subdir-objects no-dist-gzip dist-xz])
 AM_SILENT_RULES([yes])
 
-AC_CONFIG_SRCDIR([stateless.1.md])
+AC_CONFIG_SRCDIR([stateless.7.md])
 
 # Checks for programs.
 # Checks for header files.

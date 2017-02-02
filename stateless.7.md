@@ -1,4 +1,4 @@
-stateless(1) -- A guide to stateless configuration in Clear Linux OS for Intel Architecture
+stateless(7) -- A guide to stateless configuration in Clear Linux OS for Intel Architecture
 =============================================
 
 ## SYNOPSIS
