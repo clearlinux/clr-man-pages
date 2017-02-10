@@ -115,11 +115,11 @@ add one line containing `X11Forwarding yes`. Other often used options
 include `PermitRootLogin yes` to allow root ssh login access, and the
 following 3 lines to disable password authentication entirely:
 
-`ChallengeResponseAuthentication no`
+    `ChallengeResponseAuthentication no`
 
-`PasswordAuthentication no`
+    `PasswordAuthentication no`
 
-`UsePAM no`
+    `UsePAM no`
 
 To modify the listening port of sshd, one needs to determine whether
 `sshd.socket` or `sshd.service` is enabled first, since the methods
@@ -147,6 +147,13 @@ And add a line in that file that reads:
     
 to, for instance, change the port number sshd.service will listen on
 to port 10022.
+
+Root login over SSH is disabled by default and should remain disabled
+for most systemd. However, in some cases this is acceptable and it can
+be easily enabled by adding the following line to `/etc/ssh/sshd_config`
+that reads:
+
+    `PermitRootLogin yes`
 
 
  * **nginx**
