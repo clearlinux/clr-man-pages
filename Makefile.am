@@ -1,16 +1,19 @@
 EXTRA_DIST = \
 	README.md \
 	LICENSE \
+	os-core.7 \
+	os-core.7.md \
 	stateless.7 \
 	stateless.7.md
 
 dist_man_MANS = \
+	os-core.7 \
 	stateless.7
 
-all:
-	@echo 'Run `make man` to regenerate roff man page files'
+clean-local:
+	rm -f $(dist_man_MANS)
 
-.PHONY: man
-man:
-	ronn stateless.7.md
-	rm -f stateless.7.html
+man: $(dist_man_MANS)
+
+$(dist_man_MANS):
+	ronn -r $(patsubst %,%.md,$@)

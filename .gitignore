@@ -1,3 +1,4 @@
+*.7
 Makefile
 Makefile.in
 aclocal.m4
@@ -8,4 +9,3 @@ config.status
 configure
 install-sh
 missing
-stateless.1
