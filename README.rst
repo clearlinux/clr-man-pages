@@ -1,5 +1,6 @@
 
-## clr-man-pages
+clr-man-pages
+=============
 
 Provides a few extra man pages that describes the particularities
 of Clear Linux OS for Intel Architecture, and some useful tips

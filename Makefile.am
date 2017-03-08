@@ -1,10 +1,10 @@
 EXTRA_DIST = \
-	README.md \
+	README.rst \
 	LICENSE \
 	os-core.7 \
-	os-core.7.md \
+	os-core.7.rst \
 	stateless.7 \
-	stateless.7.md
+	stateless.7.rst
 
 dist_man_MANS = \
 	os-core.7 \
@@ -16,4 +16,4 @@ clean-local:
 man: $(dist_man_MANS)
 
 $(dist_man_MANS):
-	ronn -r $(patsubst %,%.md,$@)
+	rst2man.py $(patsubst %,%.rst,$@) > $@
