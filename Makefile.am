@@ -15,5 +15,5 @@ clean-local:
 
 man: $(dist_man_MANS)
 
-$(dist_man_MANS):
-	rst2man.py $(patsubst %,%.rst,$@) > $@
+%: %.rst
+	rst2man.py $< > $@
