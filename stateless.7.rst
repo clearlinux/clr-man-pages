@@ -182,11 +182,12 @@ Nginx ships by default in a non-functional configuration. However,
 an example configuration file is present that can be used to enable
 a simple server. To use this template configuration, create:
 
-    ``mkdir /etc/nginx``
+    ``mkdir -p /etc/nginx/conf.d``
 
-And then copy the template over to this folder:
+And then copy configuration templates over to this folder:
 
-    ``cp /usr/share/nginx/conf/server.conf.example /etc/nginx/server.conf``
+    ``cp /usr/share/nginx/conf/nginx.conf.example /etc/nginx/nginx.conf``
+    ``cp /usr/share/nginx/conf/server.conf.example /etc/nginx/conf.d/server.conf``
 
 Edit the file to assure options such as SSL and PHP are enabled in
 the preferred method. In the default configuration, PHP is enabled
