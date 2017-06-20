@@ -127,7 +127,7 @@ configuration file is present on the file system. The man page for
 ``sshd_config``\(5) explains the format, and it suffices to put only a
 single option in the file
 
-   ``/etc/sshd/sshd_config``
+   ``/etc/ssh/sshd_config``
 
 For example, to enable X11 forwarding through sshd all one has to do is
 add one line containing ``X11Forwarding yes``. Other often used options
