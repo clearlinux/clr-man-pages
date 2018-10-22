@@ -76,7 +76,7 @@ never be modified, and will be overwritten by ``swupd``\(1) as needed.
 Some default configuration structure and data is automatically created
 under ``/etc/`` and ``/var/``. The user may remove these file system
 structures entirely - a reboot of the OS should properly restore the
-system to it's factory default. This may also provide the user with
+system to its factory default. This may also provide the user with
 a way to repair and a defective system configuration.
 
 The user should, if user configuration of a service is needed,
