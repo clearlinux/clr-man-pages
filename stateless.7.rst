@@ -77,7 +77,7 @@ Some default configuration structure and data is automatically created
 under ``/etc/`` and ``/var/``. The user may remove these file system
 structures entirely - a reboot of the OS should properly restore the
 system to its factory default. This may also provide the user with
-a way to repair and a defective system configuration.
+a way to repair a defective system configuration.
 
 The user should, if user configuration of a service is needed,
 attempt to place the configuration file in the ``/etc/`` structure as
