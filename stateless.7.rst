@@ -232,6 +232,29 @@ copy them and modify them as needed as well, as well as adjust the
 ``include`` configuration option in ``php-fpm.conf`` to point to a new 
 location for pool configuration files.
 
+Network interface management
+----------------------------
+
+Clear Linux has switched the network interface management model to be fully
+managed by NetworkManager when installed on real hardware. Previously, Ethernet
+interfaces were managed by systemd-networkd whereas Wi-Fi and others were
+managed by NetworkManager. Clear Linux cloud images continue to use
+systemd-networkd.
+
+When updating from previous versions of Clear Linux, the installation will be
+reconfigured to continue with systemd-networkd managing the Ethernet interfaces.
+Since the connectivity could be lost during the procedure, physical access to the
+system is required. To switch to NetworkManager for all the interfaces, the
+user should disable and stop systemd-networkd:
+
+    ``sudo systemctl disable systemd-networkd``
+    ``sudo systemctl stop systemd-networkd``
+
+Then, remove the file ``/etc/NetworkManager/conf.d/systemd-networkd-unmanaged.conf``
+
+Finally, restart NetworkManager
+
+    ``sudo systemctl restart NetworkManager``
 
 SEE ALSO
 ========
