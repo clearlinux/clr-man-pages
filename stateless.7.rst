@@ -97,6 +97,22 @@ consult the relevant manual pages for the software to find information
 on the specific syntax and options for each software.
 
 
+ldconfig
+--------
+
+    ``ldconfig``\(8)
+
+The default paths that the linker searches includes only ``/usr/lib64``
+and paths below that. This explicitly omits ``/usr/local/``. If you
+compile libraries manually and install them in other paths, you may
+need to configure the ``ld.so``\(8) linker to find these before you run
+``ldconfig``. For example:
+
+    ``echo "/usr/local/lib" | sudo tee -a /etc/ld.so.conf``
+
+    ``sudo ldconfig``
+
+
 systemd
 -------
 
