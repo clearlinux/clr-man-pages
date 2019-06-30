@@ -263,10 +263,11 @@ Since the connectivity could be lost during the procedure, physical access to th
 system is required. To switch to NetworkManager for all the interfaces, the
 user should disable and stop systemd-networkd:
 
-    ``sudo systemctl disable systemd-networkd``
-    ``sudo systemctl stop systemd-networkd``
+    ``sudo systemctl disable systemd-networkd && sudo systemctl stop systemd-networkd``
 
-Then, remove the file ``/etc/NetworkManager/conf.d/systemd-networkd-unmanaged.conf``
+Then, remove the systemd-networkd-unmanaged.conf file:
+
+    ``sudo rm /etc/NetworkManager/conf.d/systemd-networkd-unmanaged.conf``
 
 Finally, restart NetworkManager
 
