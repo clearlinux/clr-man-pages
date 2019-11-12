@@ -23,6 +23,15 @@ SYNOPSIS
 
 ``/var/cache/``
 
+``/usr/local/``
+
+``/usr/src/``
+
+``/usr/lib/kernel/``
+
+``/usr/lib/modules/``
+
+
 DESCRIPTION
 ===========
 
@@ -95,6 +104,24 @@ many cases, the man pages for the respective packages also provides
 detailed information as to how to configure the software. Please 
 consult the relevant manual pages for the software to find information
 on the specific syntax and options for each software.
+
+
+Where can I install system-wide files then?
+-------------------------------------------
+
+``swupd``\(1) has a list of exempted locations where the system
+administrator can place files that will not get overwritten or removed
+at all. The default whitelisted directories are:
+
+    ``/usr/lib/modules``
+    ``/usr/lib/kernel``
+    ``/usr/local``
+    ``/usr/src``
+
+Using these locations for your own software is highly recommended. Not
+only do these locations provide a standard FHS compliant way of adding
+local software, they are sufficiently separated from OS software that
+maintaining them will be much more simple.
 
 
 ldconfig
